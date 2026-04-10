@@ -59,3 +59,36 @@ public class QuadraticProbing
         tablo[indis] = anahtar;
     }
 }
+
+
+// 3-) Double Hashing : yer doluysa kac adim atilacagini 2. fonksiyona bakarak belirler
+public class DoubleHashing
+{
+    private int?[] tablo = new int?[10];
+    private int TABLO_BOYUTU = 10;
+
+    private int Hash1(int anahtar) => anahtar % TABLO_BOYUTU;
+
+    // yerin dolu olması durumunda kac adim atilacagini belirleyen 2. hash fonksiyonu
+    // genelde asal sayıyla yapilir
+    // asla 0 donmemelidir
+    private int Hash2(int anahtar) => 7 - (anahtar % 7); 
+
+    public void Ekle(int anahtar)
+    {
+        int indis = Hash1(anahtar);
+        int adimSayisi = Hash2(anahtar); // Zıplama mesafemizi öğrendik!
+        int i = 0;
+
+        while (tablo[indis] != null)
+        {
+            i++;
+
+            indis = (Hash1(anahtar) + (i * adimSayisi)) % TABLO_BOYUTU;
+
+            if (i == TABLO_BOYUTU) return; 
+        }
+
+        tablo[indis] = anahtar;
+    }
+}
