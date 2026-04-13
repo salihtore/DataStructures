@@ -80,6 +80,7 @@ public class DoubleHashing
         int adimSayisi = Hash2(anahtar); 
         int i = 0;
 
+        //yer null olmadıgı surece hash fonksiyonlarina gore indis bak
         while (tablo[indis] != null)
         {
             i++;
