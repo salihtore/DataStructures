@@ -38,7 +38,7 @@ public class İkiliAgac
         if (deger < suanki.veri)
         suanki.Sol = EkleRecursive(suanki.Sol, deger);
 
-        if (deger > suanki.veri)
+        else if (deger > suanki.veri)
         suanki.Sag = EkleRecursive(suanki.Sag, deger);
 
         return suanki;
