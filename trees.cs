@@ -9,7 +9,7 @@ public class AgacDugumu
     public AgacDugumu Sol;
     public AgacDugumu Sag;
 
-    public AgacDugumu(int veri)
+    public AgacDugumu(int deger)
     {
         veri = deger;
         Sol = null;
