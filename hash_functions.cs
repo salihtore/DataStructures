@@ -77,7 +77,7 @@ public class DoubleHashing
     public void Ekle(int anahtar)
     {
         int indis = Hash1(anahtar);
-        int adimSayisi = Hash2(anahtar); // Zıplama mesafemizi öğrendik!
+        int adimSayisi = Hash2(anahtar); 
         int i = 0;
 
         while (tablo[indis] != null)
